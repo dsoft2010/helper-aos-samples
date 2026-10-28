@@ -1,0 +1,31 @@
+# Built application files
+*.apk
+*.aab
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sensitive information)
+local.properties
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+
+# Keystore and signing files (never commit)
+*.jks
+*.keystore
+google-services.json
+jks/
+
+# ProGuard
+proguard-rules.pro
+
+# Misc
+*.log
