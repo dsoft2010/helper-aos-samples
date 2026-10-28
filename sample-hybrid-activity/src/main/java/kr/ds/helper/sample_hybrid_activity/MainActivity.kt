@@ -2,6 +2,7 @@ package kr.ds.helper.sample_hybrid_activity
 
 import android.app.Application
 import android.os.Bundle
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import kr.ds.helper.hybrid_app_activity_base.BaseMainActivity
 import kr.ds.helper.web.WebBridge

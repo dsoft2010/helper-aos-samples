@@ -2,6 +2,7 @@ package kr.ds.helper.sample_web
 
 import android.os.Bundle
 import android.webkit.WebView
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import kr.ds.helper.web.WebBridge
 import kr.ds.helper.web.DefaultWebBridge

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kr.ds.network.RetrofitClient
-import kotlinx.coroutines.MainScope
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import retrofit2.http.GET
 
@@ -25,10 +25,12 @@ class MainActivity : AppCompatActivity() {
             listOf()
         )
 
-        MainScope().launch {
+        lifecycleScope.launch {
             try {
                 val posts = service.getPosts()
                 textView.text = "Posts: ${posts.size}"
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
             } catch (e: Exception) {
                 textView.text = "Error: ${e.message}"
             }

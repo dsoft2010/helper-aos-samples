@@ -30,9 +30,24 @@
 | compileSdk | 35 |
 | minSdk | API 24 이상 |
 | 언어 | Kotlin |
-| 빌드 도구 | Gradle (Kotlin DSL `.kts`) |
+| 빌드 도구 | Gradle 8.7 (Wrapper 포함) |
+| JDK | 17 (AGP 8.6.1 권장) |
 
-### 1.3 라이브러리 연동 방법 (GitHub Packages)
+### 1.3 빌드 및 실행
+
+```bash
+# 환경변수 설정 (GitHub Packages 인증)
+export USERNAME="your-github-username"
+export TOKEN="your-personal-access-token"
+
+# 샘플 앱 빌드
+./gradlew :sample-web:assembleDebug
+./gradlew :sample-network:assembleDebug
+./gradlew :sample-hybrid-activity:assembleDebug
+./gradlew :sample-hybrid-fragment:assembleDebug
+```
+
+### 1.4 라이브러리 연동 방법 (GitHub Packages)
 
 이 저장소의 샘플 앱은 `project(...)` 로컬 모듈 참조 대신 **GitHub Packages 배포 좌표**를 사용합니다. 라이브러리 소스를 직접 수정할 필요 없이 버전 관리된 AAR을 가져와 사용할 수 있습니다.
 

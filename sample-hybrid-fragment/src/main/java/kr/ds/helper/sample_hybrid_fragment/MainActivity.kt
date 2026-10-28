@@ -1,6 +1,7 @@
 package kr.ds.helper.sample_hybrid_fragment
 
 import android.os.Bundle
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import kr.ds.helper.hybrid_app_fragment_base.BaseHybridMainActivity
 import kr.ds.helper.web.WebBridge
